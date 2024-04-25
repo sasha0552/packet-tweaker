@@ -10,14 +10,7 @@ import xyz.nucleoid.packettweaker.ContextProvidingPacketListener;
 @SuppressWarnings("AddedMixinMembersNamePattern")
 @Mixin(ServerConfigurationNetworkHandler.class)
 public abstract class ServerConfigurationNetworkHandlerMixin implements ContextProvidingPacketListener {
-    @Shadow protected abstract GameProfile getProfile();
-
     @Shadow private SyncedClientOptions syncedOptions;
-
-    @Override
-    public GameProfile getGameProfileForPacketTweaker() {
-        return this.getProfile();
-    }
 
     @Override
     public SyncedClientOptions getClientOptionsForPacketTweaker() {

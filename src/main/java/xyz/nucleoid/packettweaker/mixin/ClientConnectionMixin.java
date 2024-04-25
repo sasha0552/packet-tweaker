@@ -22,7 +22,7 @@ public class ClientConnectionMixin {
         var self = (ClientConnection) (Object) this;
         ConnectionHolder encoder = (ConnectionHolder) this.channel.pipeline().get("encoder");
         if (encoder != null) {
-            encoder.setConnection(self);
+            encoder.packet_tweaker$setConnection(self);
         }
     }
 
@@ -31,7 +31,7 @@ public class ClientConnectionMixin {
         var self = (ClientConnection) (Object) this;
         ConnectionHolder encoder = (ConnectionHolder) this.channel.pipeline().get("encoder");
         if (encoder != null) {
-            encoder.setConnection(self);
+            encoder.packet_tweaker$setConnection(self);
         }
     }
 

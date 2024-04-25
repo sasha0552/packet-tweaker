@@ -30,11 +30,6 @@ public abstract class ServerPlayNetworkHandlerMixin implements ContextProvidingP
     }
 
     @Override
-    public GameProfile getGameProfileForPacketTweaker() {
-        return this.getProfile();
-    }
-
-    @Override
     public SyncedClientOptions getClientOptionsForPacketTweaker() {
         if (this.clientSettings == null) {
             this.clientSettings = this.player.getClientOptions();
@@ -46,5 +41,4 @@ public abstract class ServerPlayNetworkHandlerMixin implements ContextProvidingP
     private void clearCachedClientSettings(ClientOptionsC2SPacket clientSettingsC2SPacket, CallbackInfo ci) {
         this.clientSettings = null;
     }
-
 }

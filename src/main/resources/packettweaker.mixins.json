@@ -5,13 +5,17 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "ClientConnectionMixin",
-    "PacketDecoderMixin",
     "EncoderHandlerMixin",
+    "PacketDecoderMixin",
     "PacketListenerMixin",
+    "ServerCommonNetworkHandlerMixin",
     "ServerConfigurationNetworkHandlerMixin",
     "ServerPlayNetworkHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "client.ClientCommonNetworkHandlerMixin"
+  ]
 }

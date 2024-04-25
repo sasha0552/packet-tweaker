@@ -6,6 +6,7 @@ import net.minecraft.network.listener.PacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.packet.c2s.common.SyncedClientOptions;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
@@ -79,6 +80,10 @@ public final class PacketContext {
         return this.target.getGameProfileForPacketTweaker();
     }
 
+    @Nullable
+    public RegistryWrapper.WrapperLookup getRegistryWrapperLookup() {
+        return this.target.getWrapperLookupForPacketTweaker();
+    }
 
     public ContextProvidingPacketListener getPacketListener() {
         return this.target;
