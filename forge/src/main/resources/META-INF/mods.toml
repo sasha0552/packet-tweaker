@@ -1,0 +1,34 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/sasha0552/packet-tweaker/issues"
+license = "MIT"
+
+[[mods]]
+modId = "packet_tweaker"
+version = "${version}"
+displayName = "Packet Tweaker"
+authors = "Gegy, Patbox, sasha0552"
+description = '''
+Library to assist with transforming packets before they get sent to the client
+'''
+
+[[dependencies.packet_tweaker]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.1.14,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.packet_tweaker]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.packet_tweaker]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"

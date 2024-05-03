@@ -8,7 +8,9 @@
   "license": "LGPLv3",
   "environment": "*",
   "entrypoints": {
-    "main": []
+    "main": [
+      "org.sasha0552.packet_tweaker.fabric.PacketTweakerFabric"
+    ]
   },
   "mixins": ["packettweaker.mixins.json"],
   "custom": {
@@ -17,8 +19,8 @@
     }
   },
   "depends": {
-    "fabricloader": ">=0.14.13",
-    "minecraft": ">=1.19.4-",
-    "java": ">=17"
+    "architectury": ">=9.2.14",
+    "fabric": "*",
+    "minecraft": ">=1.20.1"
   }
 }
